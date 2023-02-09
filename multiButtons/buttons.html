@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            width: 100%;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        #input1{
+            margin-left: 30%;
+            margin-top: 6%;
+        }
+       input{
+            margin-left: 100px;
+            margin-top: 100px;
+       }
+       .second{
+            width: 100%;
+            height: 100px;
+            background-color: lightgreen;
+       }
+       button{
+            margin-left: 170px;
+            margin-top: 35px;
+       }
+       .third{
+            width: 100%;
+            height: 300px;
+            background-color: lightsalmon;
+       }
+       .one{
+            width: 20%;
+            height: 200px;
+            background-color: beige;
+            margin-left: 200px;
+            position: absolute;
+            margin-top: 50px;
+       }
+       .two{
+            width: 20%;
+            height: 200px;
+            background-color: beige;
+            margin-left: 900px;
+            position: absolute;
+            margin-top: 50px;
+
+       }
+       #img1{
+            position:absolute;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+    </div>
+    <div class="second">
+        <button onclick="get1()">Click 1</button>
+        <button onclick="get2()">Click 2</button>
+        <button onclick="get3()">Click 3</button>
+        <button onclick="get4()">Click 4</button>
+        <button onclick="get5()">Click 5</button>
+    </div>
+    <div class="third">
+        <div class="one" id="div1"> Hello Chetna!</div>
+        <div class="two" id="div2">Bye Chetna! </div>
+    </div>
+    <script>
+        function get1(){
+            x= document.getElementById('input1').value;
+            document.getElementById('input2').value=x
+        }
+        function get2(){
+            x= document.getElementById('input1').value;
+            alert(x)
+            y= document.getElementById('div1').innerHTML;
+            alert(y)
+            z= document.getElementById('div2').innerHTML;
+            alert(z)
+        }
+        function get3(){
+            x= document.getElementById('input1').value;
+            document.getElementById('div2').innerHTML=x
+        }
+        function get4(){
+            y= document.getElementById('div1').innerHTML;
+            x= document.getElementById('input1').value;
+            b= document.getElementById('input2').value;
+            document.getElementById('div1').innerHTML=y+x+b
+        }
+        function get5(){
+            // x= document.getElementById('input1').value;
+            document.getElementById('input1').type="radio"
+            document.getElementById('input2').type="checkbox"
+            document.getElementById('div2').style.backgroundImage="url('b1.jpg')"
+        }
+    </script>
+</body>
+</html>
